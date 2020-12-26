@@ -26,7 +26,7 @@ SECRET_KEY = 'jo!_#l$e*6s-a*(37*%_)hgxo)j!)rbfz$l0^ii6@^!589dqss'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sciense2020.herokuapp.com']
 
 
 # Application definition
