@@ -1,0 +1,71 @@
+.years{
+    display: flex;
+    flex-direction: column;
+}
+.years__title{
+    text-align: center;
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    background-color:white;
+    margin-bottom: 10px;
+}
+.active{
+    color:white;
+    background-color:rgb(124, 7, 7);
+}
+.containers{
+    border:2px solid rgb(26, 23, 23);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+#intro h2{
+    text-align: center;
+}
+.sciense__row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+
+}
+.button{
+    list-style: none;
+    border-radius:10px;
+}
+.sciense__post{
+    border-radius:10px;
+    max-width: 400px;
+    margin-right: 15px;
+    margin-top: 15px;
+    background:white;
+    padding: 40px 10px;
+}
+.sciense__img{
+    width: 100%;
+    border-radius:10px;
+}
+.sciense__year{
+    text-align: center;
+}
+.sciense__title{
+    text-align: center;
+}
+.sciense__block-img{
+    width: 100%;
+
+}
+.logo_img_block{
+    width: 150px;
+}
+.logo_img{
+    border-radius:10px;
+    width: 100%;
+}
