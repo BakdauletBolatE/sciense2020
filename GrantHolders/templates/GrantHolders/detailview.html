@@ -27,7 +27,8 @@
             <h3>Ғылыми жетекші: <span class="spanEL">{{qhol.teacher}}</span></h3>
             <h3>Жобаның мерзімі:<span class="spanEL">{{qhol.project_duration}}</span></h3>
             <h3>Жобаның мақсаты: <span class="spanEL">{{qhol.purpose_project}}</span></h3>
-            <h3>Жоба мақсатына жету жолы:<span class="spanEL"> {% autoescape off %}{{ qhol.ways_project }}{% endautoescape %} </span></h3>
+            <h3>Жоба мақсатына жету жолы:</h3>
+            {% autoescape off %}{{ qhol.ways_project }}{% endautoescape %}
             <h3>Күтілетін нәтижелер:</h3>
             {% autoescape off %}{{qhol.expected_result}}{% endautoescape %} 
             <h3>Ғылыми жұмыстың жаңалығы</h3>
@@ -67,7 +68,7 @@
 
     <!-- About -->
         <section class="blurb">
-            <h2>About</h2>
+            <h2>Біз жайлы</h2>
             <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
             <ul class="actions">
                 <li><a href="#" class="button">Learn More</a></li>

@@ -2,7 +2,15 @@ from django.db import models
 
 # Create your models here.
 class Subject(models.Model):
-    pass
+    name = models.CharField("Сабақтың аты",max_length=255)
+
+    class Meta:
+        verbose_name = "Пән"
+        verbose_name_plural = "Пәндер"
+
+    def __str__(self):
+        return self.name
+
 class GrantHolders(models.Model):
     name = models.CharField("Грант иегерінің есімі", max_length=200)
     age = models.DateField("Туылған жылы")
@@ -18,3 +26,10 @@ class GrantHolders(models.Model):
     graduate_year = models.IntegerField("Грант алған жылы",default=0) 
     subject = models.ForeignKey(Subject,verbose_name="Грант иегерінің пәні",on_delete=models.CASCADE,blank=True,null=True)
      
+    class Meta:
+        verbose_name = "Грант иегері"
+        verbose_name_plural = "Грант иегерлері"
+
+    def __str__(self):
+        return self.name
+        
