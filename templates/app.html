@@ -103,14 +103,31 @@
 			<script>
 				const filterBox = document.querySelectorAll('.sciense__post');
 				const years = document.querySelectorAll('.years__title');
-
-			   
+				const degreeTitle = document.querySelectorAll('.degree__title'); 			   
 
 				filterBox.forEach(elem=>{
 					if(!elem.classList.contains('2020')){
 						elem.classList.add('hide');
 					}
-				})
+				});
+
+				degreeTitle.forEach(elem=>{
+					elem.addEventListener('click',elem=>{
+						degreeTitle.forEach(t=>{
+							t.classList.remove('active');
+						});
+						elem.target.classList.add('active');
+						let telem = elem.target.dataset['d'];
+						filterBox.forEach(elem=>{
+							elem.classList.remove('hide')
+							
+							if (!elem.classList.contains(telem)){
+								
+								elem.classList.add('hide');
+							}
+						})
+					});
+				});
 				years.forEach(elem=>{  
 					
 					elem.addEventListener('click',elem=>{

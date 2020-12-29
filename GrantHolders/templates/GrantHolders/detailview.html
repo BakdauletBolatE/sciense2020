@@ -14,6 +14,7 @@
             <header>
                 <div class="title">
                     <h2><a href="#">{{ qhol.name }}</a></h2>
+                    <h2><a href="#">{{ qhol.degree }}</a></h2>
                     <p>Silkway халықаралық университетінің {{qhol.graduate_year}} жылғы білім грант иегері</p>
                 </div>
                 <div class="meta">
@@ -34,13 +35,19 @@
             <h3>Ғылыми жұмыстың жаңалығы</h3>
             {% autoescape off %}{{ qhol.novelty_scientific }}{% endautoescape %} 
           
-            <!-- <footer>
+            <footer>
                 <ul class="stats">
-                    <li><a href="#">General</a></li>
-                    <li><a href="#" class="icon fa-heart">28</a></li>
-                    <li><a href="#" class="icon fa-comment">128</a></li>
+                    <li><a href="#">Ұсыну</a></li>
+                    {% if isLiked %}
+                    <button type="submit" class="icon fa-heart" > {{like.count}}</button>
+                    {% else %}
+                        <form id ="p" method="POST" action="{%url 'like' qhol.slug%}">
+                            {% csrf_token %}
+                            <button type="submit" class="icon fa-heart" > {{like.count}}</button>
+                        </form>
+                    {% endif %}
                 </ul>
-            </footer> -->
+            </footer>
         </article>
 
 </div>
@@ -74,4 +81,10 @@
                 <li><a href="{% url 'home' %}" class="button">Артқа "Грант иегерлерінің тізіміне"</a></li>
             </ul>
         </section> 
+
+        <script>
+        
+            
+
+        </script>
 {% endblock %}

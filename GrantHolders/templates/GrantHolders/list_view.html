@@ -9,17 +9,29 @@
 
 				<!-- Main -->
 					<div id="main">
-						<div class="sciense__row">
+						<section class="degree">
+						
+							<p data-d="Бакалавр" class="degree__title active" href="#">Бакалавр</p>
+							<p data-d="Магистратура" class="degree__title" href="#">Магистратура</p>
+							<p data-d="Доктарантура" class="degree__title" href="#">Доктарантура</p>
+						</section>
+						<div class="sciense__row">		
                         <!-- Post -->
                         {% for qhol in qhols %}
-							<article class="sciense__post {{qhol.graduate_year}}">	
-								<div class="sciense__block-img">
-									<img class="sciense__img" src="{{ qhol.poster.url }}" alt="">
+							<article class="sciense__post {{ qhol.degree }} {{qhol.graduate_year}}">
+								<div>
+									<div class="sciense__block-img">
+										<img class="sciense__img" src="{{ qhol.poster.url }}" alt="">
+									</div>
 								</div>
-								<h2 class="sciense__title">{{ qhol.name }}</h2>	
-								<h4 class="sciense__year">{{ qhol.graduate_year }}</h4>
-								<h3 class="sciense__year">Тақырыбы:<span class="spanEL">{{ qhol.project_name }}</span></h3>
-								<p class="sciense_description">Мақсаты: {{ qhol.purpose_project }}</p>
+								<div>
+									<h2 class="sciense__title">{{ qhol.name }}</h2>	
+									<h4 class="sciense__year">{{ qhol.graduate_year }}</h4>
+									<h4 class="sciense__year">{{ qhol.degree }}</h4>
+									<h3 class="sciense__year">Тақырыбы:<span class="spanEL">{{ qhol.project_name }}</span></h3>
+									<p class="sciense_description">Мақсаты: {{ qhol.purpose_project }}</p>
+								</div>	
+								
 								<a href="{% url 'detailview' qhol.slug %}" class="button">Толығырақ</a>
                             </article>
                             {% endfor %}

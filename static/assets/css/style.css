@@ -2,6 +2,20 @@
     display: flex;
     flex-direction: column;
 }
+.degree{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.degree__title{
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    border:none;
+    padding: 10px;
+    background-color:white;
+    margin-bottom: 10px;
+}
 .years__title{
     text-align: center;
     border-radius: 10px;
@@ -38,7 +52,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:center;
 
 }
 .button{
@@ -50,6 +63,9 @@
     max-width: 400px;
     margin-right: 15px;
     margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     background:white;
     padding: 20px 10px;
 }

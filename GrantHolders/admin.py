@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import GrantHolders
+from .models import GrantHolders,Like,Subject
 from django import forms
 # Register your models here.
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
@@ -17,3 +17,5 @@ class GrantHoldersAdmin(admin.ModelAdmin):
     form = GrantHoldersForm
     prepopulated_fields = {"slug": ("name",)}
 admin.site.register(GrantHolders,GrantHoldersAdmin)
+admin.site.register(Subject)
+admin.site.register(Like)
