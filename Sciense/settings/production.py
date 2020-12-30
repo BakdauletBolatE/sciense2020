@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'GrantHolders',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'Users',
 ]
 
 MIDDLEWARE = [

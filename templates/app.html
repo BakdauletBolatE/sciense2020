@@ -31,10 +31,30 @@
 							<ul>
 								<li><a href="{% url 'home' %}">Грант Иегерлері</a></li>
 								<li><a href="#">Жаңалықтар блогы</a></li>
+								{% if request.user.is_authenticated %}
+								
+								<li>
+									<a href="">{{ request.user }}</a>
+								</li>
+								<li>
+									<a href="{% url 'user:logout' %}">Шығу</a>
+								</li>
+								{% else %}
+								<li>
+									<a style="color:white;" href="{% url 'user:loginn' %}">Кіру</a>
+								</li>
+								<li>
+									<a style="color:white;" href="{% url 'user:register' %}">Тіркелу</a>
+								</li>
+								{% endif %}
 							</ul>
+							
 						</nav>
 						<nav class="main">
 							<ul>
+								<li class="menu">
+									<a class="fa-star" href="{% url 'user:like_list' %}">Menu</a>
+								</li>
 								<li class="search">
 									<a class="fa-search" href="#search">Іздеу</a>
 									<form id="search" method="get" action="#">
@@ -44,6 +64,7 @@
 								<li class="menu">
 									<a class="fa-bars" href="#menu">Menu</a>
 								</li>
+								
 							</ul>
 						</nav>
 					</header>
@@ -62,6 +83,24 @@
 								<ul class="links">
 									<li><a href="{% url 'home' %}">Грант Иегерлері</a></li>
 									<li><a href="#">Жаңалықтар блогы</a></li>
+									{% if request.user.is_authenticated %}
+									<li>
+										<a href="">{{ request.user }}</a>
+									</li>
+									<li class="menu">
+										<a class="icon fa-star" href="{% url 'user:like_list' %}">ЛүпілҚор</a>
+									</li>
+									<li>
+										<a href="{% url 'user:logout' %}">Шығу</a>
+									</li>
+									{% else %}
+									<li>
+										<a style="color:white;" href="{% url 'user:loginn' %}">Кіру</a>
+									</li>
+									<li>
+										<a style="color:white;" href="{% url 'user:register' %}">Тіркелу</a>
+									</li>
+									{% endif %}
 								</ul>
 								<section class="years">
 									<p class="years__title" href="#">Жылдар бойынша тізім</p>
@@ -131,6 +170,7 @@
 				years.forEach(elem=>{  
 					
 					elem.addEventListener('click',elem=>{
+						window.scrollTo(pageXOffset,0);
 						years.forEach(t=>{
 							t.classList.remove('active');
 						});

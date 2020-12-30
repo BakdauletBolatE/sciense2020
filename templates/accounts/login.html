@@ -1,0 +1,40 @@
+{% extends 'app.html' %}
+{% block content %}
+{% load static %}
+<div id="main">
+<div class="loginform">
+    <h2>Кіру</h2>
+    <form method="POST" action="{% url 'user:loginn'%}">
+        {% csrf_token %}
+
+    {{form.username.label}}
+    {{form.username}}
+    {{form.password.label}}
+    {{form.password1}}
+    <button class="mt-3" type="submit">Кіру</button>
+    </form>
+</div>
+
+
+</div>
+<section id="sidebar">
+
+    <!-- Intro -->
+        <section id="intro">
+            <a href="#" class="logo"><img src="{% static 'images/photo.png' %}" alt="" /></a>
+            <h2>Silkway халықаралық университетінің Грант Иегерлерінің тізімі</h2>
+        </section>
+
+    <!-- Mini Posts -->
+       
+        
+
+    
+
+    <!-- About -->
+    <section class="blurb">
+        <h2>Бұл сайтқа тіркелу не үшін қажет?</h2>
+        <p>Сайтқа тіркелу арқылы сіздер білім грант иегерлерін қолдауға және барлық жасап жатқан жаңалықтарын бірінші болып көруге мүмкіндік аласыз</p>
+        
+    </section> 
+{% endblock %}
