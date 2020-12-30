@@ -143,3 +143,25 @@
     font-size: 18px;
     font-weight: 500;
 }
+.paragrapht{
+    font-size: 18px;
+    font-weight: 500;
+}
+@media screen and (max-width: 550px){
+    .sciense__block-imgs{
+        height: 50%;
+        margin-left: 20px;
+    }
+    .sciense__imgs{
+        border-radius:50%;
+    }
+    .sciense__posts{
+        height: 100px;
+    }
+    .paragraph{
+        display: none;
+    }
+    .like__title{
+        font-size: 14px;
+    }
+}

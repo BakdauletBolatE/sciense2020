@@ -160,3 +160,10 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'Management.storage_backends.MediaStorage'
+
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER ='b.fead@mail.ru'
+EMAIL_HOST_PASSWORD = 'LLJcbFbfwBKGX9TE'
+EMAIL_USE_TSL = False
+EMAIL_USE_SSL = True
