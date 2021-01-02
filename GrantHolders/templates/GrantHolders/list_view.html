@@ -1,7 +1,8 @@
 {% extends 'app.html' %}
 {% block title %}
+{% load static i18n %}
 <title>
-    Silkway халықаралық университетінің грант иегерлерінің тізімі
+    {% trans 'Silkway халықаралық университетінің грант иегерлерінің тізімі' %}
 </title>
 {% endblock %}
 {% block content%}
@@ -11,9 +12,9 @@
 					<div id="main">
 						<section class="degree">
 						
-							<p data-d="Бакалавр" class="degree__title" href="#">Бакалавр</p>
-							<p data-d="Магистратура" class="degree__title" href="#">Магистратура</p>
-							<p data-d="Доктарантура" class="degree__title" href="#">Доктарантура</p>
+							<p data-d="Бакалавр" class="degree__title" href="#">{% trans 'Бакалавр' %}</p>
+							<p data-d="Магистратура" class="degree__title" href="#">{% trans 'Магистратура' %}</p>
+							<p data-d="Доктарантура" class="degree__title" href="#">{% trans 'Доктарантура' %}</p>
 						</section>
 						<div class="sciense__row">		
                         <!-- Post -->
@@ -28,11 +29,11 @@
 									<h2 class="sciense__title">{{ qhol.name }}</h2>	
 									<h4 class="sciense__year">{{ qhol.graduate_year }}</h4>
 									<h4 class="sciense__year">{{ qhol.degree }}</h4>
-									<h3 class="sciense__year">Тақырыбы:<span class="spanEL">{{ qhol.project_name }}</span></h3>
-									<p class="sciense_description">Мақсаты: {{ qhol.purpose_project }}</p>
+									<h3 class="sciense__year">{% trans 'Тақырыбы:' %}<span class="spanEL">{{ qhol.project_name }}</span></h3>
+									<p class="sciense_description">{% trans 'Мақсаты:' %} {{ qhol.purpose_project }}</p>
 								</div>	
 								
-								<a href="{% url 'detailview' qhol.slug %}" class="button">Толығырақ</a>
+								<a href="{% url 'detailview' qhol.slug %}" class="button">{% trans 'Толығырақ' %}</a>
                             </article>
                             {% endfor %}
 						</div>
@@ -55,12 +56,12 @@
 						<!-- Intro -->
 							<section id="intro">
 								<a href="#" class="logo"><img src="{% static 'images/photo.png' %}" alt="" /></a>
-								<h2>Silkway халықаралық университетінің Грант Иегерлерінің тізімі</h2>
+								<h2>{% trans 'Silkway халықаралық университетінің Грант Иегерлерінің тізімі' %}</h2>
 							</section>
 
 						<!-- Mini Posts -->
 							<section class="years">
-								<p class="years__title" href="#">Жылдар бойынша тізім</p>
+								<p class="years__title" href="#">{% trans 'Жылдар бойынша тізім' %}</p>
 								<p data-f="2020" class="years__title active" href="#">2020</p>
 								<p data-f="2019" class="years__title" href="#">2019</p>
 								<p data-f="2018" class="years__title" href="#">2018</p>
@@ -72,8 +73,8 @@
 
 						<!-- About -->
                         <section class="blurb">
-                            <h2>Біз жайлы</h2>
-                            <p>Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған.</p>
+							<h2>{% trans 'Біз жайлы' %}</h2>
+							<p>{% trans 'Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған.' %}</p>
                             
                         </section> 
                          <script>

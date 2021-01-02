@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-02 17:28+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:7
+#: GrantHolders/templates/GrantHolders/detailview.html:19
+msgid "жылғы білім грант иегері "
+msgstr "обладатель образовательного гранта от"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:19
+msgid "Silkway халықаралық университетінің"
+msgstr "Международный университет Silkway"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:28
+msgid "Жоба тақырыбы:"
+msgstr "Название Проекта:"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:29
+msgid "Ғылыми жетекші:"
+msgstr "Научный руководитель:"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:30
+msgid "Жобаның мерзімі:"
+msgstr "Продолжительность проекта:"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:31
+msgid "Жобаның мақсаты:"
+msgstr "Цель проекта:"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:32
+msgid "Жоба мақсатына жету жолы:"
+msgstr "Как достичь цели проекта:"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:34
+msgid "Күтілетін нәтижелер:"
+msgstr "Ожидаемые результаты:"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:36
+msgid "Ғылыми жұмыстың жаңалығы"
+msgstr "Новизна научной работы"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:41
+msgid "Ұсыну"
+msgstr "Лайк"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:48
+msgid "Лайк басу үшін тіркеліңіз"
+msgstr "Зарегистрируйтесь, чтобы лайкнуть"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:63
+msgid "Silkway халықаралық университетінің Грант Иегері"
+msgstr "Обладатель гранта Международного университета Silkway"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:80
+#: GrantHolders/templates/GrantHolders/list_view.html:76
+msgid "Біз жайлы"
+msgstr "О нас"
+
+#: GrantHolders/templates/GrantHolders/detailview.html:81
+#: GrantHolders/templates/GrantHolders/list_view.html:77
+#: templates/Users/like_list.html:47
+msgid ""
+"Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, "
+"экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі "
+"ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған."
+msgstr ""
+"Научно-исследовательская работа университета включает педагогику и "
+"психологию, юриспруденцию,фундаментальная по приоритетным направлениям "
+"экономики и естествознаниянаправлена ​​на развитие науки и прикладных "
+"исследований."
+
+#: GrantHolders/templates/GrantHolders/detailview.html:83
+msgid "Артқа \"Грант иегерлерінің тізіміне\""
+msgstr "Вернуться в «Список победителей гранта»"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:5
+#: templates/Users/like_list.html:5
+#, fuzzy
+#| msgid "Silkway халықаралық университетінің Грант Иегері"
+msgid "Silkway халықаралық университетінің грант иегерлерінің тізімі"
+msgstr "Обладатель гранта Международного университета Silkway"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:15
+msgid "Бакалавр"
+msgstr "Бакалавр"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:16
+msgid "Магистратура"
+msgstr "Магистратура"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:17
+msgid "Доктарантура"
+msgstr "Доктарантура"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:32
+#: templates/Users/like_list.html:26
+#, fuzzy
+#| msgid "Жоба тақырыбы:"
+msgid "Тақырыбы:"
+msgstr "Название Проекта:"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:33
+#, fuzzy
+#| msgid "Жобаның мақсаты:"
+msgid "Мақсаты:"
+msgstr "Цель проекта:"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:36
+msgid "Толығырақ"
+msgstr "Читать больше"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:59
+#, fuzzy
+msgid "SILKWAY ХАЛЫҚАРАЛЫҚ УНИВЕРСИТЕТІНІҢ ГРАНТ ИЕГЕРЛЕРІНІҢ ТІЗІМІ"
+msgstr "СПИСОК ГРАНТОВ МЕЖДУНАРОДНОГО УНИВЕРСИТЕТА SILKWAY"
+msgid "Silkway халықаралық университетінің Грант Иегерлерінің тізімі"
+msgstr "Обладатель гранта Международного университета Silkway"
+
+#: GrantHolders/templates/GrantHolders/list_view.html:64 templates/app.html:139
+msgid "Жылдар бойынша тізім"
+msgstr "Список по годам"
+
+#: templates/Users/like_list.html:13
+#, fuzzy
+#| msgid "Грант Иегерлері"
+msgid "Сіз лүпілдеткен грант иегерлері"
+msgstr "Держатели грантов"
+
+#: templates/Users/like_list.html:25
+#, fuzzy
+#| msgid "Грант Иегерлері"
+msgid "жылғы грант иегері"
+msgstr "Держатели грантов"
+
+#: templates/Users/like_list.html:44 templates/app.html:124
+msgid "ЛүпілҚор"
+msgstr "Избранные"
+
+#: templates/app.html:33 templates/app.html:117
+msgid "Грант Иегерлері"
+msgstr "Держатели грантов"
+
+#: templates/app.html:34 templates/app.html:118
+msgid "Жаңалықтар блогы"
+msgstr "Блок новостей"
+
+#: templates/app.html:41 templates/app.html:127
+msgid "Шығу"
+msgstr "Выход"
+
+#: templates/app.html:45 templates/app.html:131
+msgid "Кіру"
+msgstr "Вход"
+
+#: templates/app.html:48 templates/app.html:134
+msgid "Тіркелу"
+msgstr "Регистрация"
+
+#: templates/app.html:169
+msgid "SWIU БілімҒылым"
+msgstr "SWIU ОбразованиеНаука"

@@ -18,12 +18,17 @@ from django.urls import path,include
 from .views import home
 from django.conf import settings
 from django.conf.urls.static import static 
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
-    path('',include('GrantHolders.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/',include('ckeditor_uploader.urls')),
-    path('user/',include(('Users.urls','user')))
+    path('i18n/',include('django.conf.urls.i18n'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += i18n_patterns(
+    path('user/',include(('Users.urls','user'))),
+    path('',include('GrantHolders.urls')),
+)
 

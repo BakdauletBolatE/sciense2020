@@ -1,9 +1,10 @@
 <!-- Main -->
 {% extends 'app.html' %}
 {% load static %}
+{% load static i18n %}
 {% block title %}
 <title>
-    {{qhol.graduate_year}} жылғы білім грант иегері {{qhol.name}}
+    {{qhol.graduate_year}} {% trans 'жылғы білім грант иегері ' %}{{qhol.name}}
 </title>
 {% endblock %}
 {% block content %}
@@ -15,7 +16,7 @@
                 <div class="title">
                     <h2><a href="#">{{ qhol.name }}</a></h2>
                     <h2><a href="#">{{ qhol.degree }}</a></h2>
-                    <p>Silkway халықаралық университетінің {{qhol.graduate_year}} жылғы білім грант иегері</p>
+                    <p>{% trans 'Silkway халықаралық университетінің'%} {{qhol.graduate_year}} {% trans 'жылғы білім грант иегері ' %}</p>
                 </div>
                 <div class="meta">
                     <div class="logo_img_block">
@@ -24,27 +25,27 @@
                     
                 </div>
             </header>
-            <h3>Жоба тақырыбы: <span class="spanEL">{{ qhol.project_name }}</span></h3>
-            <h3>Ғылыми жетекші: <span class="spanEL">{{qhol.teacher}}</span></h3>
-            <h3>Жобаның мерзімі:<span class="spanEL">{{qhol.project_duration}}</span></h3>
-            <h3>Жобаның мақсаты: <span class="spanEL">{{qhol.purpose_project}}</span></h3>
-            <h3>Жоба мақсатына жету жолы:</h3>
+            <h3>{% trans 'Жоба тақырыбы:' %} <span class="spanEL">{{ qhol.project_name }}</span></h3>
+            <h3>{% trans 'Ғылыми жетекші:' %}<span class="spanEL">{{qhol.teacher}}</span></h3>
+            <h3>{% trans 'Жобаның мерзімі:' %}<span class="spanEL">{{qhol.project_duration}}</span></h3>
+            <h3>{% trans 'Жобаның мақсаты:' %} <span class="spanEL">{{qhol.purpose_project}}</span></h3>
+            <h3>{% trans 'Жоба мақсатына жету жолы:' %}</h3>
             {% autoescape off %}{{ qhol.ways_project }}{% endautoescape %}
-            <h3>Күтілетін нәтижелер:</h3>
+            <h3>{% trans 'Күтілетін нәтижелер:' %}</h3>
             {% autoescape off %}{{qhol.expected_result}}{% endautoescape %} 
-            <h3>Ғылыми жұмыстың жаңалығы</h3>
+            <h3>{% trans 'Ғылыми жұмыстың жаңалығы' %}</h3>
             {% autoescape off %}{{ qhol.novelty_scientific }}{% endautoescape %} 
           
             <footer>
                 <ul class="stats">
-                    <li><a href="#">Ұсыну</a></li>
+                    <li><a href="#">{% trans 'Ұсыну' %}</a></li>
                     {% if request.user.is_authenticated %}
                         <form id ="p" method="POST" action="{%url 'like' qhol.slug%}">
                             {% csrf_token %}
                             <button id="like" data-l="{% if isLiked %}isLiked{% endif %} " type="submit" class="icon fa-heart" > {{like.count}}</button>
                         </form>
                     {% else %}
-                    <button id="like" data-l="{% if isLiked %}isLiked{% endif %} " type="submit" class="icon fa-heart" > {{like.count}} Лайк басу үшін тіркеліңіз </button>
+                    <button id="like" data-l="{% if isLiked %}isLiked{% endif %} " type="submit" class="icon fa-heart" > {{like.count}} {% trans 'Лайк басу үшін тіркеліңіз' %} </button>
                     {% endif %}
                    
                 </ul>
@@ -59,7 +60,7 @@
     <!-- Intro -->
         <section id="intro">
             <a href="#" class="logo"><img src="{% static 'images/photo.png' %}" alt="" /></a>
-            <h2>Silkway халықаралық университетінің Грант Иегері</h2>
+            <h2>{% trans 'Silkway халықаралық университетінің Грант Иегері' %}</h2>
         </section>
 
     <!-- Mini Posts -->
@@ -76,10 +77,10 @@
 
     <!-- About -->
         <section class="blurb">
-            <h2>Біз жайлы</h2>
-            <p>Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған.</p>
+            <h2>{% trans 'Біз жайлы' %}</h2>
+            <p>{% trans 'Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған.' %}</p>
             <ul class="actions">
-                <li><a href="{% url 'home' %}" class="button">Артқа "Грант иегерлерінің тізіміне"</a></li>
+                <li><a href="{% url 'home' %}" class="button">{% trans 'Артқа "Грант иегерлерінің тізіміне"' %}</a></li>
             </ul>
         </section> 
         <script

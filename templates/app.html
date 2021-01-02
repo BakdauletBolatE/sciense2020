@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n%}
+{% load static i18n %}
 <!DOCTYPE HTML>
 <!--
 	Future Imperfect by HTML5 UP
@@ -22,29 +24,28 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-		
+				
 					<header id="header">
 						
-						<h1><a href="{% url 'home' %}">БілімҒылым</a></h1>
+						<h1></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="{% url 'home' %}">Грант Иегерлері</a></li>
-								<li><a href="#">Жаңалықтар блогы</a></li>
+								<li><a href="{% url 'home' %}">{% trans 'Грант Иегерлері' %}</a></li>
+								<li><a href="#">{% trans 'Жаңалықтар блогы' %}</a></li>
 								{% if request.user.is_authenticated %}
 								
 								<li>
 									<a href="">{{ request.user }}</a>
 								</li>
 								<li>
-									<a href="{% url 'user:logout' %}">Шығу</a>
+									<a href="{% url 'user:logout' %}">{% trans 'Шығу' %}</a>
 								</li>
 								{% else %}
 								<li>
-									<a style="color:white;" href="{% url 'user:loginn' %}">Кіру</a>
+									<a style="color:white;" href="{% url 'user:loginn' %}">{% trans 'Кіру' %}</a>
 								</li>
 								<li>
-									<a style="color:white;" href="{% url 'user:register' %}">Тіркелу</a>
+									<a style="color:white;" href="{% url 'user:register' %}">{% trans 'Тіркелу' %}</a>
 								</li>
 								{% endif %}
 							</ul>
@@ -52,6 +53,38 @@
 						</nav>
 						<nav class="main">
 							<ul>
+								<li class="menu lang">
+										<form action="{% url 'set_language' %}" method="POST"  class="sub-menu">
+											{% csrf_token %}
+											<input name="next" type="hidden" value="{{ redirect_to }}">
+											<select onchange="this.form.submit()" class="select_r" name="language" id="">
+												{% get_current_language as LANGUAGE_CODE %}
+												{% get_available_languages as LANGUAGES %}
+												{% get_language_info_list for LANGUAGES as languages %}
+												{% for language in languages %}
+												
+												<option  value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+													{{ language.name_local}}({{language.code}})
+												</option>
+												{% endfor %}
+												
+											</select>
+											
+											
+											<!-- <div class="sub-menu__row">
+												<li>
+													KZ
+												</li>
+												<li>
+													EN
+												</li>
+												<li>
+													RU
+												</li>
+											</div>	 -->
+										</form>
+								</li>
+							
 								<li class="menu">
 									<a class="fa-star" href="{% url 'user:like_list' %}">Menu</a>
 								</li>
@@ -81,29 +114,29 @@
 						<!-- Links -->
 							<section>
 								<ul class="links">
-									<li><a href="{% url 'home' %}">Грант Иегерлері</a></li>
-									<li><a href="#">Жаңалықтар блогы</a></li>
+									<li><a href="{% url 'home' %}">{% trans 'Грант Иегерлері' %}</a></li>
+									<li><a href="#">{% trans 'Жаңалықтар блогы' %}</a></li>
 									{% if request.user.is_authenticated %}
 									<li>
 										<a href="">{{ request.user }}</a>
 									</li>
 									<li class="menu">
-										<a class="icon fa-star" href="{% url 'user:like_list' %}">ЛүпілҚор</a>
+										<a class="icon fa-star" href="{% url 'user:like_list' %}">{% trans 'ЛүпілҚор' %}</a>
 									</li>
 									<li>
-										<a href="{% url 'user:logout' %}">Шығу</a>
+										<a href="{% url 'user:logout' %}">{% trans 'Шығу' %}</a>
 									</li>
 									{% else %}
 									<li>
-										<a href="{% url 'user:loginn' %}">Кіру</a>
+										<a href="{% url 'user:loginn' %}">{% trans 'Кіру' %}</a>
 									</li>
 									<li>
-										<a href="{% url 'user:register' %}">Тіркелу</a>
+										<a href="{% url 'user:register' %}">{% trans 'Тіркелу' %}</a>
 									</li>
 									{% endif %}
 								</ul>
 								<section class="years">
-									<p class="years__title" href="#">Жылдар бойынша тізім</p>
+									<p class="years__title" href="#">{% trans 'Жылдар бойынша тізім' %}</p>
 									<p data-f="2020" class="years__title active" href="#">2020</p>
 									<p data-f="2019" class="years__title" href="#">2019</p>
 									<p data-f="2018" class="years__title" href="#">2018</p>
@@ -133,7 +166,7 @@
 									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
 									<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
-								<p class="copyright">&copy; SWIU БілімҒылым</p>
+								<p class="copyright">&copy; {% trans 'SWIU БілімҒылым' %}</p>
 							</section>
 
 					</section>

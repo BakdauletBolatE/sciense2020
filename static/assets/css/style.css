@@ -1,3 +1,76 @@
+/* .header{
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    top:56px;
+    left:0;
+    background-color: #7c0707;
+}
+.header__row{
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+}
+.container{
+    max-width: 1400px;
+    margin:0 auto;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+.nav__link{
+    color:white;
+    display: block;
+    text-decoration: none;
+    line-height: 56px;
+    height: 56px!important;
+} */
+.lang{
+    position: relative;
+    width: 64px;
+    height: 56px;
+}
+
+.sub-menu{
+    width: 64px;
+    height: 100%;
+    position: relative;
+}
+.sub-menu__row{
+    display: flex;
+    width: 64px;
+    flex-direction: column;
+}
+.sub-menu li{
+    display: none!important;
+    margin:0!important;
+    padding:3px 0px!important;
+    text-align: center;
+    width: 100%;
+    line-height: 1!important;
+    border:none!important;
+    color:white;
+    background-color: rgb(10, 10, 88);
+}
+.lang:hover .sub-menu li{
+    display: block!important;
+}
+.select_r{
+    text-decoration: none;
+    border:none!important;
+    color: white;
+    background-color:rgb(124, 7, 7);
+    overflow: visible;
+    position: relative;
+    text-indent: none;
+    width: 64px;
+    height: 56px;
+}
+.option_form{
+    color:violet;
+}
 .years{
     display: flex;
     flex-direction: column;
@@ -147,6 +220,7 @@
     font-size: 18px;
     font-weight: 500;
 }
+
 @media screen and (max-width: 550px){
     .sciense__block-imgs{
         height: 50%;
@@ -165,3 +239,4 @@
         font-size: 14px;
     }
 }
+

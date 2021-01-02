@@ -1,7 +1,8 @@
 {% extends 'app.html' %}
 {% block title %}
+{% load static i18n %}
 <title>
-    Silkway халықаралық университетінің грант иегерлерінің тізімі
+    {% trans 'Silkway халықаралық университетінің грант иегерлерінің тізімі' %}
 </title>
 {% endblock %}
 {% block content%}
@@ -9,7 +10,7 @@
 {% load static %}
 
 <div id="main">
-    <h2>Сіз лүпілдеткен грант иегерлері</h2>
+    <h2> {% trans 'Сіз лүпілдеткен грант иегерлері' %}</h2>
     <div class="sciense__rows">		
         <!-- Post -->
         
@@ -21,8 +22,8 @@
                 </div>
                 <div class="like">
                     <a href="{% url 'detailview' qhol.post.slug %}" class="like__title">{{ qhol.post.name }} </a>	
-                    <p class="like__title paragrapht">{{ qhol.post.graduate_year }} жылғы грант иегері</p>
-                    <p class="like__title paragraph">Тақырыбы: {{ qhol.post.project_name }}</hp>
+                    <p class="like__title paragrapht">{{ qhol.post.graduate_year }}  {% trans 'жылғы грант иегері' %}</p>
+                    <p class="like__title paragraph"> {% trans 'Тақырыбы:' %} {{ qhol.post.project_name }}</hp>
                 </div>	
                 
                
@@ -40,10 +41,10 @@
     <section class="blurb">
         <div >
             <i class="icon fa-star"></i>
-            <h2>ЛүпілҚор</h2>
+            <h2>{% trans 'ЛүпілҚор' %}</h2>
         </div>
         
-        <p>Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған.</p>
+        <p>{% trans 'Университеттің ғылыми-зерттеу жұмысы педагогика мен психология, құқықтану, экономика және жаратылыстану ғылымдарының басым бағыттары бойынша іргелі ғылымдар мен қолданбалы зерттеулерді дамытуға бағытталған.' %}</p>
         
     </section> 
 

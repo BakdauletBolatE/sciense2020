@@ -131,6 +131,17 @@ USE_L10N = True
 
 USE_TZ = True
 
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('ru', gettext('Russia')),
+    ('en',gettext('English')),
+    ('kk',gettext('Kazakhstan')),
+)
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR,'locale'),
+)
+
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 MEDIA_URL = '/media/'
